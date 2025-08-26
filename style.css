@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Blood Crow';
-    src: url("./fonts/bloodcrow.ttf") format('truetype');
+    src: url("./fonts/BloodCrow.ttf") format('truetype');
 }
 
 * {
@@ -14,7 +14,15 @@
 body {
     font-family: 'Blood Crow', cursive;
     background-color: #292929;
-    color: #c7c7c7;
+    color: #dddddd;
+}
+
+a {
+    color: rgb(200, 0, 0);
+}
+
+a:hover {
+    color: orange;
 }
 
 div#home {
