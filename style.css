@@ -30,6 +30,7 @@ div#home {
 }
 
 nav {
+    z-index: 2;
     background: url("./images/MuzanEyes.PNG") center no-repeat;
     width: 98.8vw;
     height: 8vh;
@@ -63,6 +64,7 @@ header > div#home {
 }
 
 header > div > img.Akaza {
+    z-index: 1;
     width: 400px;
     height: 500px;
     position: relative;
@@ -72,6 +74,7 @@ header > div > img.Akaza {
 }
 
 header > div > img.Rengoku {
+    z-index: 3;
     width: 600px;
     height: 700px;
     position: relative;
@@ -86,7 +89,7 @@ main {
 
 main > div#summary {
     text-align: center;
-    padding: 0px 20px 20px 20px;
+    padding: 0px 20px 50px 20px;
 }
 
 h2 {
@@ -96,4 +99,33 @@ h2 {
 
 main > div#summary > p {
     font-size: 1.5rem;
+}
+
+main > div#characters {
+    text-align: center;
+}
+
+main > div#characters > div > h3 {
+    font-size: 2.2rem;
+    margin: 20px 0px;
+}
+
+main > div#characters > div > div {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+}
+
+main > div#characters > div > div > div > h4 {
+    font-size: 1.8rem;
+    margin: 10px 0px;
+}
+
+main > div#characters > div > div > div > p {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+main > div#characters > div > div > img {
+    filter: drop-shadow(-15px 20px 4px rgba(0, 0, 0, 0.5));
 }
