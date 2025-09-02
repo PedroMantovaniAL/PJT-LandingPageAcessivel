@@ -3,6 +3,11 @@
     src: url("./fonts/BloodCrow.ttf") format('truetype');
 }
 
+:root {
+    --alto-contraste-fundo: #cecece;
+    --alto-contraste-texto: #000000;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +36,7 @@ div#home {
 
 nav {
     z-index: 2;
-    background: url("./images/MuzanEyes.PNG") center no-repeat;
+    background: url("./images/MuzanEyes.PNG") center/cover no-repeat;
     width: 98.8vw;
     height: 8vh;
     position: fixed;
@@ -128,4 +133,63 @@ main > div#characters > div > div > div > p {
 
 main > div#characters > div > div > img {
     filter: drop-shadow(-15px 20px 4px rgba(0, 0, 0, 0.5));
+}
+
+div#acessibilidade > button, div#opcoes-acessibilidade > button {
+    background-color: rgb(53, 90, 255);
+    border-radius: 10px;
+    border: none;
+    padding: 0px 5px 0px 5px;
+}
+
+.menu-acessibilidade{
+    position: fixed;
+    top:2rem;
+    right:20px;
+    z-index: 1000;
+}
+
+.rotacao-botao{
+    transform: rotate(-90deg);
+    transform-origin: right center;
+}
+
+.opcoes-acessibilidade{
+    margin-top:10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.opcoes-acessibilidade button{
+    margin-bottom: 5px;
+}
+.apresenta-lista{
+    display: none;
+}
+
+.alto-contraste {
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste {
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste .nav-link{
+    color: var(--alto-contraste-link);
+}
+
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button,
+.alto-contraste .btn-primary{
+    background-color: var(--alto-contraste-link);
+    color: var(--alto-contraste-fundo)
+}
+
+.alto-contraste .fundo-galeria {
+    background: none;
 }
