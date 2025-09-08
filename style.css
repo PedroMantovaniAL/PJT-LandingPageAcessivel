@@ -4,8 +4,10 @@
 }
 
 :root {
-    --alto-contraste-fundo: #cecece;
-    --alto-contraste-texto: #000000;
+    --high-contrast-background-main: #cecece;
+    --high-contrast-text-main: #000000;
+    --high-contrast-background-FooterHeader: #b8b8b8;
+    --high-contrast-text-FooterHeader: #000000;
 }
 
 * {
@@ -62,10 +64,11 @@ header {
 }
 
 header > div#home {
-    font-size: 2.5em;
+    font-size: 3em;
     color: #ffffff;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 header > div > img.Akaza {
@@ -146,13 +149,23 @@ div#acessibilidade > button, div#opcoes-acessibilidade > button {
     background-color: rgb(53, 90, 255);
     border-radius: 10px;
     border: none;
-    padding: 0px 5px 0px 5px;
+    padding: 20px;
+}
+
+div#acessibilidade > button {
+    cursor: pointer;
+    width: max-content;
+    height: max-content;
+    align-self: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #ffffff;
 }
 
 .menu-acessibilidade{
     position: fixed;
-    top:2rem;
-    right:20px;
+    top: 4rem;
+    right: 40px;
     z-index: 1000;
 }
 
@@ -170,33 +183,22 @@ div#acessibilidade > button, div#opcoes-acessibilidade > button {
 .opcoes-acessibilidade button{
     margin-bottom: 5px;
 }
+
 .apresenta-lista{
     display: none;
 }
 
 .alto-contraste {
-    background-color: var(--alto-contraste-fundo);
-    color: var(--alto-contraste-texto);
+    background-color: var(--high-contrast-background-main);
+    color: var(--high-contrast-text-main);
 }
 
-.alto-contraste header,
-.alto-contraste footer,
-.alto-contraste {
-    background-color: var(--alto-contraste-fundo);
-    color: var(--alto-contraste-texto);
+.alto-contraste header, .alto-contraste footer {
+    background-color: var(--high-contrast-background-FooterHeader);
+    color: var(--high-contrast-text-FooterHeader);
 }
 
-.alto-contraste .nav-link{
-    color: var(--alto-contraste-link);
-}
-
-.alto-contraste .botao-inicio,
-.alto-contraste .formulario button,
 .alto-contraste .btn-primary{
     background-color: var(--alto-contraste-link);
     color: var(--alto-contraste-fundo)
-}
-
-.alto-contraste .fundo-galeria {
-    background: none;
 }
