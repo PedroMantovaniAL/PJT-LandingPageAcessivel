@@ -15,7 +15,6 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    /*overflow-x: hidden;*/
 }
 
 body {
@@ -68,26 +67,33 @@ header > div#home {
     color: #ffffff;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    height: 80vh;
 }
 
-header > div > img.Akaza {
+header > div#home > div {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+img.Akaza {
     z-index: 1;
     width: 400px;
     height: 500px;
-    position: relative;
-    top: 100px;
-    left: 300px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
 }
 
-header > div > img.Rengoku {
+img.Rengoku {
     z-index: 3;
-    width: 600px;
-    height: 700px;
-    position: relative;
-    top: 50px;
-    left: -400px;
+    width: 30vw;
+    height: 80vh;
+    position: absolute;
+    top: 100px;
+    left: 0px;
     filter: drop-shadow(-15px 20px 4px rgba(0, 0, 0, 0.5));
 }
 
@@ -111,6 +117,9 @@ main > div#summary > p {
 
 main > div#characters {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main > div#characters > div > h3 {
@@ -201,4 +210,10 @@ div#acessibilidade > button {
 .alto-contraste .btn-primary{
     background-color: var(--alto-contraste-link);
     color: var(--alto-contraste-fundo)
+}
+
+@media (max-width: 768px) {
+    header > div#home > div {
+        display: none;
+    }
 }
